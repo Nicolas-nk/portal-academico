@@ -7,7 +7,7 @@ class DbConnection{
                 host: 'localhost',
                 user: 'root',
                 password: '12345678',
-                database: ''
+                database: 'academicodb2b12'
             });
 
             this.conn.connect((error)=>{

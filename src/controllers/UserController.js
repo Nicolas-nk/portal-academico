@@ -6,8 +6,11 @@ class UserController {
         try {
             const result = await User.findUsers();
             res.send(result);
+
         } catch (error) {
             res.send(error);
         }
     }
 }
+
+module.exports = new UserController();

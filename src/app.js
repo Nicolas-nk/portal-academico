@@ -17,8 +17,8 @@ function authenticationMiddleware(req, res, next){
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const loginRouter = require('./routes/loginRouter');
-const logoutRouter = require('./routes/logoutRouter');
+const loginRoutes = require('./routes/loginRoutes');
+const logoutRoutes = require('./routes/logoutRoutes');
 
 
 
@@ -49,8 +49,8 @@ app.use(passport.session());
 // fim
 
 app.use('/users',authenticationMiddleware, usersRouter);
-app.use('/login', loginRouter);
-app.use('/logout', logoutRouter);
+app.use('/login', loginRoutes);
+app.use('/logout', logoutRoutes);
 app.use('/',authenticationMiddleware, indexRouter);
 
 // catch 404 and forward to error handler
